@@ -11,18 +11,18 @@ app.get("/", (req, res) => {
 
 const config = {
   prefix: "-",
-  channel2: "1285951792777007104",//ايدي شات الاستقالة
-  channel3: "1285951789606109185",//ايدي شات العصابات
-    channel4: "1285951779170943056",//ايدي شات الداخلية
+  channel2: "1190345008478437506",//ايدي شات الاستقالة
+  channel3: "1175165416881000519",//ايدي شات العصابات
+    channel4: "1190330447373275289",//ايدي شات الداخلية
   channel5: "1190331700304154664",//ايدي شات مخالفات
-  channel6: "1285951786427092992",//ايدي شات العدل
+  channel6: "1190330447373275289",//ايدي شات العدل
   channel7: "1190331828398211122",//ايدي شات تسديد
   channel8: "1184419551698489376",//ايدي شات يوتيوبر 
   channel9: "1184419610267746334",//ايدي شات تيكتوكر
-  channel10: "1285951791309258762",//ايدي شات اعلامي
+  channel10: "1175165418541957240",//ايدي شات اعلامي
   channel11: "1114202424245235823",//ايدي شات مطعم
   channel12: "1190331326600069311",//ايدي شات معرض
-  line: "https://media.discordapp.net/attachments/1285951265410650205/1288974290930368532/1141592862618828840.jpg?ex=6710d79a&is=670f861a&hm=c9584c5b7cfead510cdebb0ca40021b56e51bc5cde09a060dd0d2a57d6138bb6&"
+  line: "https://cdn.discordapp.com/attachments/1148980819227070484/1184224040668385390/809343066489880599.png?"
 }
 
 
@@ -69,7 +69,7 @@ client.on("messageCreate", async message => {
           .setFooter({ text: `ID: ${message.author.id}` })
           .setTitle(`تقديم استقالة `)
           .setDescription(`سوف يتم الرد عليك قريباً من المسؤولين
-<@&1285950632661880863>
+          <@&1114201824661098636>
           `)
           .addFields([
             {
@@ -149,7 +149,7 @@ client.on("messageCreate", async message => {
         msg3.delete().catch(err => 0);
         collect3.first().delete().catch(() => 0);
         message.channel.send({ content: `اي عصابه تبي
-__ 𝗠𝗲𝘅𝐢𝗰𝗮𝗻 | Outlaws | 𝗘𝗹 𝗠𝗮𝗻𝗱𝗼   __  ` }).then(async msg4 => {
+__ البلود | مافيا | الماندو   __  ` }).then(async msg4 => {
       message.channel.awaitMessages({ filter: (m) => m.author.id === message.author.id, max: 1 }).then(async collect4 => {
         if(!collect4.first()) return;
         data.section = collect4.first().content;
@@ -160,9 +160,15 @@ __ 𝗠𝗲𝘅𝐢𝗰𝗮𝗻 | Outlaws | 𝗘𝗹 𝗠𝗮𝗻𝗱𝗼   __  
           .setFooter({ text: `ID: ${message.author.id}` })
           .setTitle(`تقديم العصابات `)
           .setDescription(`سوف يتم الرد عليك قريباً من المسؤولين
-          <@&1286611053383520258>
-          <@&1285950767173210174>
-          <@&1285950766095269991>
+          <@&1114201907490197614>
+          <@&1114201907993530479>
+          <@&1114201908899479573>
+          <@&1114201915211907152>
+          <@&1114201921121689730>
+          <@&1114201922128330772>
+          <@&1126360505741746278>
+          <@&1126360647828000888>
+          <@&1126360715813462076>
           `)
           .addFields([
             {
@@ -242,7 +248,7 @@ client.on("messageCreate", async message => {
         msg3.delete().catch(err => 0);
         collect3.first().delete().catch(() => 0);
         message.channel.send({ content: `اي قطاع تبي
-قـوات الـطـوارئ| الـدوريـات الامـنـيـة` }).then(async msg4 => {
+الامن العام| قوات` }).then(async msg4 => {
       message.channel.awaitMessages({ filter: (m) => m.author.id === message.author.id, max: 1 }).then(async collect4 => {
         if(!collect4.first()) return;
         data.section = collect4.first().content;
@@ -253,7 +259,7 @@ client.on("messageCreate", async message => {
           .setFooter({ text: `ID: ${message.author.id}` })
           .setTitle(`تقديم الداخلية`)
           .setDescription(`سوف يتم الرد عليك قريباً من المسؤولين
-          <@&1285950689985691739>`)
+          <@&1114201854419664976>`)
           .addFields([
             {
               name: "الاسم :",
@@ -415,7 +421,7 @@ client.on("messageCreate", async message => {
         data.iden = collect3.first().content;
         msg3.delete().catch(err => 0);
         collect3.first().delete().catch(() => 0);
-        message.channel.send({ content: `  الوظيفه |مكافحة|محامي|قاضي` }).then(async msg4 => {
+        message.channel.send({ content: `  الوظيفه |محقق|محامي|قاضي` }).then(async msg4 => {
       message.channel.awaitMessages({ filter: (m) => m.author.id === message.author.id, max: 1 }).then(async collect4 => {
         if(!collect4.first()) return;
         data.section = collect4.first().content;
@@ -426,8 +432,8 @@ client.on("messageCreate", async message => {
           .setFooter({ text: `ID: ${message.author.id}` })
           .setTitle(`العدل`)
           .setDescription(`سوف يتم الرد من احد المسؤولين
-          <@&1285950715470282803>
-          <@&1285950713981308983>
+          <@&1116678464045600778>
+          <@&1116678554520932392>
           
           `)
           .addFields([
@@ -478,5 +484,4 @@ client.on("messageCreate", async message => {
 client.on("messageCreate", async message => {
   if(message.author.bot || !message.guild) return;
   let args = message.content.split(" ");
-  if(args[0] === prefix + "تسديد") {
-    if(message.channel.id != config.channel7) re
+  if(ar
