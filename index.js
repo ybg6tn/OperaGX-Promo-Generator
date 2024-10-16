@@ -484,4 +484,447 @@ client.on("messageCreate", async message => {
 client.on("messageCreate", async message => {
   if(message.author.bot || !message.guild) return;
   let args = message.content.split(" ");
-  if(ar
+  if(args[0] === prefix + "تسديد") {
+    if(message.channel.id != config.channel7) return;
+    let data = {};
+    message.channel.send({ content: `اسمك  ؟` }).then(async msg => {
+      message.channel.awaitMessages({ filter: (m) => m.author.id === message.author.id, max: 1 }).then(collect => {
+        if(!collect.first()) return;
+        data.name = collect.first().content;
+        msg.delete().catch(err => 0);
+        collect.first().delete().catch(() => 0);
+        message.channel.send({ content: `  عمرك` }).then(async msg1 => {
+      message.channel.awaitMessages({ filter: (m) => m.author.id === message.author.id, max: 1 }).then(collect1 => {
+        if(!collect1.first()) return;
+        data.age = collect1.first().content;
+        msg1.delete().catch(err => 0);
+        collect1.first().delete().catch(() => 0);
+        message.channel.send({ content: `كم المبلغ` }).then(async msg2 => {
+      message.channel.awaitMessages({ filter: (m) => m.author.id === message.author.id, max: 1 }).then(collect2 => {
+        if(!collect2.first()) return;
+        data.experts = collect2.first().content;
+        msg2.delete().catch(err => 0);
+        collect2.first().delete().catch(() => 0);
+        message.channel.send({ content: `العسكري الي اعطاك مخالفه؟` }).then(async msg3 => {
+      message.channel.awaitMessages({ filter: (m) => m.author.id === message.author.id, max: 1 }).then(collect3 => {
+        if(!collect3.first()) return;
+        data.iden = collect3.first().content;
+        msg3.delete().catch(err => 0);
+        collect3.first().delete().catch(() => 0);
+        message.channel.send({ content: `جاهز نعم| لا ` }).then(async msg4 => {
+      message.channel.awaitMessages({ filter: (m) => m.author.id === message.author.id, max: 1 }).then(async collect4 => {
+        if(!collect4.first()) return;
+        data.section = collect4.first().content;
+        msg4.delete().catch(err => 0);
+        collect4.first().delete().catch(() => 0);
+        let embed = new Discord.MessageEmbed()
+          .setAuthor({ name: message.member.displayName, iconURL: message.author.displayAvatarURL({ dynamic: true }) })
+          .setFooter({ text: `ID: ${message.author.id}` })
+          .setTitle(`تسديد`)
+          .setDescription(``)
+          .addFields([
+            {
+              name: "الاسم :",
+              value: `${data.name}`
+            },
+            {
+              name: "العمر ؟ :",
+              value: `${data.age}`
+            },
+            {
+              name: "كم المبلغ:",
+              value: `${data.iden}`
+            },
+            {
+              name: "العسكري الي اعطاك المخالفة:",
+              value: `${data.experts}`
+            },
+            {
+              name: "جاهز نعم|لا:",
+              value: `${data.section}`
+            }
+          ])
+          .setColor("#f1c40f");
+        let msg5 = await message.channel.send({ content: `جاري تحميل بياناتك يرجى الانتظار...` });
+        setTimeout(async () => {
+          await message.delete().catch(() => 0);
+          await msg5.delete().catch(() => 0);
+          await message.channel.send({ embeds: [embed] });
+          await message.channel.send({ content: `${message.author}` });
+          await message.channel.send({ files: [config.line] }).catch(() => 0);
+          message.channel.send({ content: `**__لتسديد  يرجى إرسال:__** \`${prefix}تسديد\`` });
+        }, 5000);
+      });
+    });
+      });
+    });
+      });
+    });
+      });
+    });
+      });
+    });
+  }
+});;
+
+client.on("messageCreate", async message => {
+  if(message.author.bot || !message.guild) return;
+  let args = message.content.split(" ");
+  if(args[0] === prefix + "تيكتوكر") {
+    if(message.channel.id != config.channel8) return;
+    let data = {};
+    message.channel.send({ content: `اسمك  ؟` }).then(async msg => {
+      message.channel.awaitMessages({ filter: (m) => m.author.id === message.author.id, max: 1 }).then(collect => {
+        if(!collect.first()) return;
+        data.name = collect.first().content;
+        msg.delete().catch(err => 0);
+        collect.first().delete().catch(() => 0);
+        message.channel.send({ content: `  اسم حسابك` }).then(async msg1 => {
+      message.channel.awaitMessages({ filter: (m) => m.author.id === message.author.id, max: 1 }).then(collect1 => {
+        if(!collect1.first()) return;
+        data.age = collect1.first().content;
+        msg1.delete().catch(err => 0);
+        collect1.first().delete().catch(() => 0);
+        message.channel.send({ content: `كم متابع` }).then(async msg2 => {
+      message.channel.awaitMessages({ filter: (m) => m.author.id === message.author.id, max: 1 }).then(collect2 => {
+        if(!collect2.first()) return;
+        data.experts = collect2.first().content;
+        msg2.delete().catch(err => 0);
+        collect2.first().delete().catch(() => 0);
+        message.channel.send({ content: `ماذا سوف تقدم لى برو سيتي؟` }).then(async msg3 => {
+      message.channel.awaitMessages({ filter: (m) => m.author.id === message.author.id, max: 1 }).then(collect3 => {
+        if(!collect3.first()) return;
+        data.iden = collect3.first().content;
+        msg3.delete().catch(err => 0);
+        collect3.first().delete().catch(() => 0);
+        message.channel.send({ content: `وش محتواك ` }).then(async msg4 => {
+      message.channel.awaitMessages({ filter: (m) => m.author.id === message.author.id, max: 1 }).then(async collect4 => {
+        if(!collect4.first()) return;
+        data.section = collect4.first().content;
+        msg4.delete().catch(err => 0);
+        collect4.first().delete().catch(() => 0);
+        let embed = new Discord.MessageEmbed()
+          .setAuthor({ name: message.member.displayName, iconURL: message.author.displayAvatarURL({ dynamic: true }) })
+          .setFooter({ text: `ID: ${message.author.id}` })
+          .setTitle(`تيكتوكر`)
+          .setDescription(`سوف يتم الرد عليك من احد المسؤولين  
+          <@&1114201759838113812>
+          `)
+          .addFields([
+            {
+              name: "الاسم :",
+              value: `${data.name}`
+            },
+            {
+              name: "اسم حسابك ؟ :",
+              value: `${data.age}`
+            },
+            {
+              name: "كم متابعينك:",
+              value: `${data.iden}`
+            },
+            {
+              name: "ماذا سوف تقدم لى برو سيتي:",
+              value: `${data.experts}`
+            },
+            {
+              name: "وش محتواك:",
+              value: `${data.section}`
+            }
+          ])
+          .setColor("#f1c40f");
+        let msg5 = await message.channel.send({ content: `جاري تحميل بياناتك يرجى الانتظار...` });
+        setTimeout(async () => {
+          await message.delete().catch(() => 0);
+          await msg5.delete().catch(() => 0);
+          await message.channel.send({ embeds: [embed] });
+          await message.channel.send({ content: `${message.author}` });
+          await message.channel.send({ files: [config.line] }).catch(() => 0);
+          message.channel.send({ content: `**__لتسجيل تيكتوكر  يرجى إرسال:__** \`${prefix}تيكتوكر\`` });
+        }, 5000);
+      });
+    });
+      });
+    });
+      });
+    });
+      });
+    });
+      });
+    });
+  }
+});;
+
+client.on("messageCreate", async message => {
+  if(message.author.bot || !message.guild) return;
+  let args = message.content.split(" ");
+  if(args[0] === prefix + "يوتيوبر") {
+    if(message.channel.id != config.channel9) return;
+    let data = {};
+    message.channel.send({ content: `اسمك  ؟` }).then(async msg => {
+      message.channel.awaitMessages({ filter: (m) => m.author.id === message.author.id, max: 1 }).then(collect => {
+        if(!collect.first()) return;
+        data.name = collect.first().content;
+        msg.delete().catch(err => 0);
+        collect.first().delete().catch(() => 0);
+        message.channel.send({ content: `  اسم حسابك` }).then(async msg1 => {
+      message.channel.awaitMessages({ filter: (m) => m.author.id === message.author.id, max: 1 }).then(collect1 => {
+        if(!collect1.first()) return;
+        data.age = collect1.first().content;
+        msg1.delete().catch(err => 0);
+        collect1.first().delete().catch(() => 0);
+        message.channel.send({ content: `كم متابع` }).then(async msg2 => {
+      message.channel.awaitMessages({ filter: (m) => m.author.id === message.author.id, max: 1 }).then(collect2 => {
+        if(!collect2.first()) return;
+        data.experts = collect2.first().content;
+        msg2.delete().catch(err => 0);
+        collect2.first().delete().catch(() => 0);
+        message.channel.send({ content: `ماذا سوف تقدم لى  𝐍𝐨𝐯𝐄𝐥𝐬 𝐊𝐢𝐧𝐠؟` }).then(async msg3 => {
+      message.channel.awaitMessages({ filter: (m) => m.author.id === message.author.id, max: 1 }).then(collect3 => {
+        if(!collect3.first()) return;
+        data.iden = collect3.first().content;
+        msg3.delete().catch(err => 0);
+        collect3.first().delete().catch(() => 0);
+        message.channel.send({ content: `وش محتواك ` }).then(async msg4 => {
+      message.channel.awaitMessages({ filter: (m) => m.author.id === message.author.id, max: 1 }).then(async collect4 => {
+        if(!collect4.first()) return;
+        data.section = collect4.first().content;
+        msg4.delete().catch(err => 0);
+        collect4.first().delete().catch(() => 0);
+        let embed = new Discord.MessageEmbed()
+          .setAuthor({ name: message.member.displayName, iconURL: message.author.displayAvatarURL({ dynamic: true }) })
+          .setFooter({ text: `ID: ${message.author.id}` })
+          .setTitle(`يتويوبر`)
+          .setDescription(`سوف يتم الرد عليك من احد المسؤولين  
+          <@&1114201759838113812>
+          `)
+          .addFields([
+            {
+              name: "الاسم :",
+              value: `${data.name}`
+            },
+            {
+              name: "اسم حسابك ؟ :",
+              value: `${data.age}`
+            },
+            {
+              name: "كم متابعينك:",
+              value: `${data.iden}`
+            },
+            {
+              name: "ماذا سوف تقدم لى  𝐍𝐨𝐯𝐄𝐥𝐬 𝐊𝐢𝐧𝐠 :",
+              value: `${data.experts}`
+            },
+            {
+              name: "وش محتواك:",
+              value: `${data.section}`
+            }
+          ])
+          .setColor("#f1c40f");
+        let msg5 = await message.channel.send({ content: `جاري تحميل بياناتك يرجى الانتظار...` });
+        setTimeout(async () => {
+          await message.delete().catch(() => 0);
+          await msg5.delete().catch(() => 0);
+          await message.channel.send({ embeds: [embed] });
+          await message.channel.send({ content: `${message.author}` });
+          await message.channel.send({ files: [config.line] }).catch(() => 0);
+          message.channel.send({ content: `**__لتسجيل يوتيوبر  يرجى إرسال:__** \`${prefix}يوتيوبر\`` });
+        }, 5000);
+      });
+    });
+      });
+    });
+      });
+    });
+      });
+    });
+      });
+    });
+  }
+});;
+
+client.on("messageCreate", async message => {
+  if(message.author.bot || !message.guild) return;
+  let args = message.content.split(" ");
+  if(args[0] === prefix + "اعلامي") {
+    if(message.channel.id != config.channel10) return;
+    let data = {};
+    message.channel.send({ content: `اسمك  ؟` }).then(async msg => {
+      message.channel.awaitMessages({ filter: (m) => m.author.id === message.author.id, max: 1 }).then(collect => {
+        if(!collect.first()) return;
+        data.name = collect.first().content;
+        msg.delete().catch(err => 0);
+        collect.first().delete().catch(() => 0);
+        message.channel.send({ content: `  عمرك ` }).then(async msg1 => {
+      message.channel.awaitMessages({ filter: (m) => m.author.id === message.author.id, max: 1 }).then(collect1 => {
+        if(!collect1.first()) return;
+        data.age = collect1.first().content;
+        msg1.delete().catch(err => 0);
+        collect1.first().delete().catch(() => 0);
+        message.channel.send({ content: ` خبراتك` }).then(async msg2 => {
+      message.channel.awaitMessages({ filter: (m) => m.author.id === message.author.id, max: 1 }).then(collect2 => {
+        if(!collect2.first()) return;
+        data.experts = collect2.first().content;
+        msg2.delete().catch(err => 0);
+        collect2.first().delete().catch(() => 0);
+        message.channel.send({ content: `     
+ هـل أنـت مـسـتعـد للإلـتـزام بـجـمـيـع قـوانـيـن وزارة الإعـلام وصـور الإعـلانـات :  
+؟` }).then(async msg3 => {
+      message.channel.awaitMessages({ filter: (m) => m.author.id === message.author.id, max: 1 }).then(collect3 => {
+        if(!collect3.first()) return;
+        data.iden = collect3.first().content;
+        msg3.delete().catch(err => 0);
+        collect3.first().delete().catch(() => 0);
+        message.channel.send({ content: ` جاهز نعم | لا ` }).then(async msg4 => {
+      message.channel.awaitMessages({ filter: (m) => m.author.id === message.author.id, max: 1 }).then(async collect4 => {
+        if(!collect4.first()) return;
+        data.section = collect4.first().content;
+        msg4.delete().catch(err => 0);
+        collect4.first().delete().catch(() => 0);
+        let embed = new Discord.MessageEmbed()
+          .setAuthor({ name: message.member.displayName, iconURL: message.author.displayAvatarURL({ dynamic: true }) })
+          .setFooter({ text: `ID: ${message.author.id}` })
+          .setTitle(`اعلامي`)
+          .setDescription(`سوف يتم الرد عليك من احد المسؤولين  
+          <@&1114201824661098636>
+          `)
+          .addFields([
+            {
+              name: "الاسم :",
+              value: `${data.name}`
+            },
+            {
+              name: " عمرك ؟ :",
+              value: `${data.age}`
+            },
+            {
+              name: " خبراتك:",
+              value: `${data.iden}`
+            },
+            {
+              name: "  هـل أنـت مـسـتعـد للإلـتـزام بـجـمـيـع قـو :",
+              value: `${data.experts}`
+            },
+            {
+              name: " جاهز:",
+              value: `${data.section}`
+            }
+          ])
+          .setColor("#f1c40f");
+        let msg5 = await message.channel.send({ content: `جاري تحميل بياناتك يرجى الانتظار...` });
+        setTimeout(async () => {
+          await message.delete().catch(() => 0);
+          await msg5.delete().catch(() => 0);
+          await message.channel.send({ embeds: [embed] });
+          await message.channel.send({ content: `${message.author}` });
+          await message.channel.send({ files: [config.line] }).catch(() => 0);
+          message.channel.send({ content: `**__لتقديم اعلامي  يرجى إرسال:__** \`${prefix}اعلامي\`` });
+        }, 5000);
+      });
+    });
+      });
+    });
+      });
+    });
+      });
+    });
+      });
+    });
+  }
+});;
+
+client.on("messageCreate", async message => {
+  if(message.author.bot || !message.guild) return;
+  let args = message.content.split(" ");
+  if(args[0] === prefix + "مطعم") {
+    if(message.channel.id != config.channel11) return;
+    let data = {};
+    message.channel.send({ content: `اسمك  ؟` }).then(async msg => {
+      message.channel.awaitMessages({ filter: (m) => m.author.id === message.author.id, max: 1 }).then(collect => {
+        if(!collect.first()) return;
+        data.name = collect.first().content;
+        msg.delete().catch(err => 0);
+        collect.first().delete().catch(() => 0);
+        message.channel.send({ content: `  عمرك ` }).then(async msg1 => {
+      message.channel.awaitMessages({ filter: (m) => m.author.id === message.author.id, max: 1 }).then(collect1 => {
+        if(!collect1.first()) return;
+        data.age = collect1.first().content;
+        msg1.delete().catch(err => 0);
+        collect1.first().delete().catch(() => 0);
+        message.channel.send({ content: ` خبراتك` }).then(async msg2 => {
+      message.channel.awaitMessages({ filter: (m) => m.author.id === message.author.id, max: 1 }).then(collect2 => {
+        if(!collect2.first()) return;
+        data.experts = collect2.first().content;
+        msg2.delete().catch(err => 0);
+        collect2.first().delete().catch(() => 0);
+        message.channel.send({ content: `     
+جاهز
+؟` }).then(async msg3 => {
+      message.channel.awaitMessages({ filter: (m) => m.author.id === message.author.id, max: 1 }).then(collect3 => {
+        if(!collect3.first()) return;
+        data.iden = collect3.first().content;
+        msg3.delete().catch(err => 0);
+        collect3.first().delete().catch(() => 0);
+        message.channel.send({ content: ` جاهز نعم | لا ` }).then(async msg4 => {
+      message.channel.awaitMessages({ filter: (m) => m.author.id === message.author.id, max: 1 }).then(async collect4 => {
+        if(!collect4.first()) return;
+        data.section = collect4.first().content;
+        msg4.delete().catch(err => 0);
+        collect4.first().delete().catch(() => 0);
+        let embed = new Discord.MessageEmbed()
+          .setAuthor({ name: message.member.displayName, iconURL: message.author.displayAvatarURL({ dynamic: true }) })
+          .setFooter({ text: `ID: ${message.author.id}` })
+          .setTitle(`مطعم`)
+          .setDescription(`سوف يتم الرد عليك من احد المسؤولين  
+          <@&1114201984933839078>
+          `)
+          .addFields([
+            {
+              name: "الاسم :",
+              value: `${data.name}`
+            },
+            {
+              name: " عمرك ؟ :",
+              value: `${data.age}`
+            },
+            {
+              name: " خبراتك:",
+              value: `${data.iden}`
+            },
+            {
+              name: "جاهز",
+              value: `${data.experts}`
+            },
+            {
+              name: " جاهز:",
+              value: `${data.section}`
+            }
+          ])
+          .setColor("#f1c40f");
+        let msg5 = await message.channel.send({ content: `جاري تحميل بياناتك يرجى الانتظار...` });
+        setTimeout(async () => {
+          await message.delete().catch(() => 0);
+          await msg5.delete().catch(() => 0);
+          await message.channel.send({ embeds: [embed] });
+          await message.channel.send({ content: `${message.author}` });
+          await message.channel.send({ files: [config.line] }).catch(() => 0);
+          message.channel.send({ content: `**__لتقديم ع مطعم  يرجى إرسال:__** \`${prefix}مطعم\`` });
+        }, 5000);
+      });
+    });
+      });
+    });
+      });
+    });
+      });
+    });
+      });
+    });
+  }
+});;
+
+client.on("messageCreate", async message => {
+  if(message.author.bot || !message.guild) return;
+  let args = message.content.split(" ");
+  if(args[0] === prefix + "معرض") {
+    if(messa
